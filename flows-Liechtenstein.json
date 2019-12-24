@@ -1,0 +1,2893 @@
+[
+    {
+        "id": "f3819da.37239e",
+        "type": "tab",
+        "label": "Boiler und Puffer",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7217214e.19e608",
+        "type": "tab",
+        "label": "Kessel",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8790a00b.73e938",
+        "type": "tab",
+        "label": "Heizkreis 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ff12617a.b394c",
+        "type": "tab",
+        "label": "Heizkreis 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5fd98180.98acc",
+        "type": "tab",
+        "label": "Heizkreis 4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "61af780e.4e87c",
+        "type": "tab",
+        "label": "Boiler Sollwerte",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c763d07c.69bc08",
+        "type": "tab",
+        "label": "HK 1, 2, 4 Sollwerte",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ffe4e7e1.330d5",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Liechtenstein Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9ebdbdea.286f08",
+        "type": "modbus-client",
+        "z": "",
+        "name": "Kessel Modbus Server",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "192.168.5.70",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "500",
+        "clientTimeout": "2000",
+        "reconnectOnTimeout": false,
+        "reconnectTimeout": "5000",
+        "parallelUnitIdsAllowed": false
+    },
+    {
+        "id": "2f6722e3.1d820e",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Liechtenstein",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fd4e11c5.b35d8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Kessel (1)",
+        "tab": "2f6722e3.1d820e",
+        "order": 2,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "9e8e5d6d.870238",
+        "type": "ui_group",
+        "z": "",
+        "name": "Kessel (2)",
+        "tab": "2f6722e3.1d820e",
+        "order": 3,
+        "disp": true,
+        "width": "3",
+        "collapse": true
+    },
+    {
+        "id": "e385b25b.dfa4e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Boiler",
+        "tab": "2f6722e3.1d820e",
+        "order": 4,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "a367ee1f.396868",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pufferspeicher",
+        "tab": "2f6722e3.1d820e",
+        "order": 5,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "5e4dcdc.cd72134",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e385b25b.dfa4e8",
+        "order": 2,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a34d22f.71c2c6",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e385b25b.dfa4e8",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "f99c1bc5.1a327",
+        "type": "ui_group",
+        "z": "",
+        "name": "Wetter",
+        "tab": "2f6722e3.1d820e",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "2d9a60fc.a38cf",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heizkreis 1",
+        "tab": "2f6722e3.1d820e",
+        "order": 6,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "3a503143.2e89d6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heizkreis 2",
+        "tab": "2f6722e3.1d820e",
+        "order": 7,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "1ea2d432.ad4d0c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heizkreis 4",
+        "tab": "2f6722e3.1d820e",
+        "order": 8,
+        "disp": true,
+        "width": "4",
+        "collapse": true
+    },
+    {
+        "id": "2451299e.e09ef6",
+        "type": "inject",
+        "z": "8790a00b.73e938",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "23f02a97.880e3e"
+            ]
+        ]
+    },
+    {
+        "id": "23f02a97.880e3e",
+        "type": "function",
+        "z": "8790a00b.73e938",
+        "name": "HK 1 Vorlauf- und Raumtemperatur",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 1100,\n    'quantity': 2}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "2d7ad3bc.b1f9f4"
+            ]
+        ]
+    },
+    {
+        "id": "17a352dc.9472a5",
+        "type": "inject",
+        "z": "8790a00b.73e938",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1 Status",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "e3adb8fe.cefca8"
+            ]
+        ]
+    },
+    {
+        "id": "e3adb8fe.cefca8",
+        "type": "function",
+        "z": "8790a00b.73e938",
+        "name": "HK 1 Pumpe, Mischer, Status",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 4,\n    'unitid': 1,\n    'address': 1105,\n    'quantity': 3}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "b10d9bc7.905258"
+            ]
+        ]
+    },
+    {
+        "id": "2d7ad3bc.b1f9f4",
+        "type": "modbus-flex-getter",
+        "z": "8790a00b.73e938",
+        "name": "HK Temperatur",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "7ba6d761.35258"
+            ],
+            [
+                "44cace36.871088"
+            ]
+        ]
+    },
+    {
+        "id": "7ba6d761.35258",
+        "type": "function",
+        "z": "8790a00b.73e938",
+        "name": "HK Temperatur",
+        "func": "var msg1 = {\n    topic: \"Vorlauftemperatur\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Raumtemperatur\",\n    payload: msg.payload[1] / 10\n};\n//\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 940,
+        "y": 80,
+        "wires": [
+            [
+                "adfd5435.992858",
+                "8aead5f6.719148"
+            ],
+            [
+                "2a9a3c00.763844",
+                "bc0666bb.8197b"
+            ]
+        ]
+    },
+    {
+        "id": "adfd5435.992858",
+        "type": "debug",
+        "z": "8790a00b.73e938",
+        "name": "Vorlauftemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "44cace36.871088",
+        "type": "modbus-response",
+        "z": "8790a00b.73e938",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2a9a3c00.763844",
+        "type": "debug",
+        "z": "8790a00b.73e938",
+        "name": "Raumtemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b10d9bc7.905258",
+        "type": "modbus-flex-getter",
+        "z": "8790a00b.73e938",
+        "name": "HK Status",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "c3504420.0eb0c"
+            ],
+            [
+                "69c71fb1.bc759"
+            ]
+        ]
+    },
+    {
+        "id": "d9d1bc7c.47dc78",
+        "type": "debug",
+        "z": "8790a00b.73e938",
+        "name": "Pumpe",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1140,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "69c71fb1.bc759",
+        "type": "modbus-response",
+        "z": "8790a00b.73e938",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 950,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c3504420.0eb0c",
+        "type": "function",
+        "z": "8790a00b.73e938",
+        "name": "HK Status",
+        "func": "var msg1 = {\n    topic: \"Pumpe\",\n    payload: msg.payload[0]\n};\nvar msg2 = {\n    topic: \"Mischer\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Status\",\n    payload: msg.payload[2]\n};\n//\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 920,
+        "y": 340,
+        "wires": [
+            [
+                "d9d1bc7c.47dc78",
+                "c35bfa83.5dc658"
+            ],
+            [
+                "d1828cc9.7e0498",
+                "f47b500f.dd00f8"
+            ],
+            [
+                "c7fca43.6bfcbd8",
+                "162c3c62.ada384"
+            ]
+        ]
+    },
+    {
+        "id": "d1828cc9.7e0498",
+        "type": "debug",
+        "z": "8790a00b.73e938",
+        "name": "Mischer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1140,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c7fca43.6bfcbd8",
+        "type": "debug",
+        "z": "8790a00b.73e938",
+        "name": "Status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1130,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b07f5ef6.8a958",
+        "type": "inject",
+        "z": "f3819da.37239e",
+        "name": "Intervall 6 Minuten",
+        "topic": "Puffer",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "360",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "37b9e248.4e8d76"
+            ]
+        ]
+    },
+    {
+        "id": "37b9e248.4e8d76",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Puffer 1",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 1900,\n    'quantity': 6};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "17f4d604.27a4fa"
+            ]
+        ]
+    },
+    {
+        "id": "75ec8c78.255df4",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Boiler",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 500,\n    'quantity': 3}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "864f3c7f.d6799"
+            ]
+        ]
+    },
+    {
+        "id": "17f4d604.27a4fa",
+        "type": "modbus-flex-getter",
+        "z": "f3819da.37239e",
+        "name": "Puffer",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "690029be.1712c8"
+            ],
+            [
+                "e73bab02.22ce9"
+            ]
+        ]
+    },
+    {
+        "id": "a3d32af6.a175a8",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Temperatur oben",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e73bab02.22ce9",
+        "type": "modbus-response",
+        "z": "f3819da.37239e",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 350,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "864f3c7f.d6799",
+        "type": "modbus-flex-getter",
+        "z": "f3819da.37239e",
+        "name": "Boiler",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "ff923be2.c98958"
+            ],
+            [
+                "b2745e3d.392f48"
+            ]
+        ]
+    },
+    {
+        "id": "b2745e3d.392f48",
+        "type": "modbus-response",
+        "z": "f3819da.37239e",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 710,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "38b347a9.04623",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Temperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "690029be.1712c8",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Puffer",
+        "func": "var msg1 = {\n    topic: \"Puffertemperatur oben\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Puffertemperatur unten\",\n    payload: msg.payload[1] / 10\n};\n// unsed\nvar msg3 = {\n    topic: \"Puffertemperatur X35\",\n    payload: msg.payload[2]\n};\nvar msg4 = {\n    topic: \"Ladepumpe\",\n    payload: msg.payload[3]\n};\nvar msg5 = {\n    topic: \"Pufferstatus\",\n    payload: msg.payload[4]\n};\nvar msg6 = {\n    topic: \"Puffer Freigabeart\",\n    payload: msg.payload[5]\n};\n//\nreturn [msg1, msg2, msg4, msg5, msg6];",
+        "outputs": 5,
+        "noerr": 0,
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "a3d32af6.a175a8",
+                "73b01f98.fef2e8"
+            ],
+            [
+                "eaf433ac.1e52f8",
+                "395cb890.27e758"
+            ],
+            [
+                "c7bc8d1a.9fb448",
+                "5c761a4c.c7cc64"
+            ],
+            [
+                "417206b8.a91ad",
+                "f3053602.c25798"
+            ],
+            [
+                "4c7693ca.bc8ac4",
+                "eec2d77a.9339e"
+            ]
+        ]
+    },
+    {
+        "id": "c7bc8d1a.9fb448",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Ladepumpe",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "417206b8.a91ad",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Pufferstatus",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "eaf433ac.1e52f8",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Temperatur unten",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4c7693ca.bc8ac4",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Freigabeart",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ff923be2.c98958",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Boiler",
+        "func": "var msg1 = {\n    topic: \"Boilertemperatur\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Boilerstatus\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Boiler Freigabeart\",\n    payload: msg.payload[2]\n};\n//\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 670,
+        "y": 540,
+        "wires": [
+            [
+                "38b347a9.04623",
+                "4412da8a.3758b4"
+            ],
+            [
+                "1c9d6ebb.1806d9",
+                "15768228.274bee"
+            ],
+            [
+                "9be4163e.6a33b8",
+                "2c3b56f9.dbf3e2"
+            ]
+        ]
+    },
+    {
+        "id": "1c9d6ebb.1806d9",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Boiler Status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "9be4163e.6a33b8",
+        "type": "debug",
+        "z": "f3819da.37239e",
+        "name": "Boiler Freigabeart",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "da5f2173.408a7",
+        "type": "inject",
+        "z": "f3819da.37239e",
+        "name": "Intervall 6 Minuten",
+        "topic": "Boiler",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "360",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 560,
+        "wires": [
+            [
+                "75ec8c78.255df4"
+            ]
+        ]
+    },
+    {
+        "id": "e9d5b538.c2d908",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Kessel [2]",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 2400,\n    'quantity': 2}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "a2723597.b31338"
+            ]
+        ]
+    },
+    {
+        "id": "a2723597.b31338",
+        "type": "modbus-flex-getter",
+        "z": "7217214e.19e608",
+        "name": "Kessel",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 510,
+        "y": 120,
+        "wires": [
+            [
+                "e9bff342.fedc8"
+            ],
+            [
+                "5f008171.32db98"
+            ]
+        ]
+    },
+    {
+        "id": "5f008171.32db98",
+        "type": "modbus-response",
+        "z": "7217214e.19e608",
+        "name": "Kessel [2]",
+        "registerShowMax": "2",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "79f58a59.0a681c",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Kesseltemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "768f0696.38f2c8",
+        "type": "inject",
+        "z": "7217214e.19e608",
+        "name": "Intervall 4 Minuten",
+        "topic": "Kessel (1)",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "240",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "e9d5b538.c2d908"
+            ]
+        ]
+    },
+    {
+        "id": "e9bff342.fedc8",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Kessel [2]",
+        "func": "var msg1 = {\n    topic: \"Kesseltemperatur\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Kessel Statuszeile\",\n    payload: msg.payload[1]\n};\n//\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "79f58a59.0a681c",
+                "3958f0d.2a01e1"
+            ],
+            [
+                "a9f0dab7.7e6a7",
+                "bec346f.79d6338"
+            ]
+        ]
+    },
+    {
+        "id": "a9f0dab7.7e6a7",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Kessel Statuszeile",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6e711e49.61f7c",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Kessel [5]",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 2404,\n    'quantity': 5}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "effba3e5.a1801"
+            ]
+        ]
+    },
+    {
+        "id": "effba3e5.a1801",
+        "type": "modbus-flex-getter",
+        "z": "7217214e.19e608",
+        "name": "Kessel",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "37259de5.526fd2"
+            ],
+            [
+                "8babfb5e.92f6e"
+            ]
+        ]
+    },
+    {
+        "id": "37259de5.526fd2",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Kessel [5]",
+        "func": "var msg1 = {\n    topic: \"Kessel Nachrichtennummer\",\n    payload: msg.payload[0]\n};\nvar msg2 = {\n    topic: \"Kessel Türkontakt\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Kessel Reinigung\",\n    payload: msg.payload[2]\n};\nvar msg4 = {\n    topic: \"Aschebox Füllstand\",\n    payload: msg.payload[3]\n};\nvar msg5 = {\n    topic: \"Aussentemperatur\",\n    payload: msg.payload[4] / 10\n};\nvar msg6 = {\n    topic: \"Kessel Betriesbart\",\n    payload: msg.payload[5]\n};\n//\nreturn [msg1, msg2, msg3, msg4, msg5];",
+        "outputs": 5,
+        "noerr": 0,
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "13efc453.c1df2c",
+                "5e24c583.475814"
+            ],
+            [
+                "89f86cc8.aeeaf",
+                "9c583351.c3b25"
+            ],
+            [
+                "9f9dd68d.d39928",
+                "3effb30c.56eed4"
+            ],
+            [
+                "daca21ff.c52c88",
+                "e58a9412.6391c"
+            ],
+            [
+                "64b9926d.ad9114",
+                "52663d3c.aa7024",
+                "4304fcbb.a54544"
+            ]
+        ]
+    },
+    {
+        "id": "13efc453.c1df2c",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Nachrichtennummer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1060,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "89f86cc8.aeeaf",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Türkontakt",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9f9dd68d.d39928",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Kesselreiningung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1050,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "daca21ff.c52c88",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Aschebox Füllstand",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1050,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "64b9926d.ad9114",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Aussentemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8af4ab3e.080f9",
+        "type": "debug",
+        "z": "7217214e.19e608",
+        "name": "Kesselbetriebsart Terminator",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1080,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "49431594.8dc6a4",
+        "type": "inject",
+        "z": "7217214e.19e608",
+        "name": "Intervall 4 Minuten",
+        "topic": "Kessel (2)",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "240",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "6e711e49.61f7c"
+            ]
+        ]
+    },
+    {
+        "id": "8babfb5e.92f6e",
+        "type": "modbus-response",
+        "z": "7217214e.19e608",
+        "name": "Kessel [5]",
+        "registerShowMax": "5",
+        "x": 680,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "80e039db.75b618",
+        "type": "inject",
+        "z": "61af780e.4e87c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "1739390e.41077f"
+            ]
+        ]
+    },
+    {
+        "id": "1739390e.41077f",
+        "type": "function",
+        "z": "61af780e.4e87c",
+        "name": "Boiler Solltemperatur",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32600,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "80779f10.9e7488"
+            ]
+        ]
+    },
+    {
+        "id": "80779f10.9e7488",
+        "type": "modbus-flex-getter",
+        "z": "61af780e.4e87c",
+        "name": "Kessel Ist-Werte",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "d7c83982.54f2d"
+            ],
+            [
+                "6f96497a.5eb058"
+            ]
+        ]
+    },
+    {
+        "id": "271ea64f.3e4d02",
+        "type": "debug",
+        "z": "61af780e.4e87c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 970,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d7c83982.54f2d",
+        "type": "function",
+        "z": "61af780e.4e87c",
+        "name": "Boiler",
+        "func": "var msg1 = {\n    topic: \"Boiler Vorlaufsolltemperatur\",\n    payload: msg.payload[0] / 10\n};\n//\nreturn [msg1];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 100,
+        "wires": [
+            [
+                "271ea64f.3e4d02"
+            ]
+        ]
+    },
+    {
+        "id": "6f96497a.5eb058",
+        "type": "modbus-response",
+        "z": "61af780e.4e87c",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 850,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1e12c171.12efdf",
+        "type": "modbus-flex-getter",
+        "z": "c763d07c.69bc08",
+        "name": "Kessel Ist-Werte",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 800,
+        "y": 260,
+        "wires": [
+            [
+                "1f385fe3.7c1e9"
+            ],
+            [
+                "96007cb7.96d8a8"
+            ]
+        ]
+    },
+    {
+        "id": "96007cb7.96d8a8",
+        "type": "modbus-response",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1f385fe3.7c1e9",
+        "type": "debug",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1010,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ed5be8aa.3a3098",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "d9a69a5f.5fd058"
+            ]
+        ]
+    },
+    {
+        "id": "d9a69a5f.5fd058",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 1 Sollwert Vorlauftemperatur",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32600,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "1a25c65.bee653a",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 2 Sollwert Vorlauftemperatur",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32650,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "f6d102d9.161a88",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 4 Sollwert Vorlauftemperatur",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32700,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "c510ef5d.de6c3",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "1a25c65.bee653a"
+            ]
+        ]
+    },
+    {
+        "id": "3799d40d.cbeaec",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "f6d102d9.161a88"
+            ]
+        ]
+    },
+    {
+        "id": "4433cd6a.9b6814",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 1 Betriebsart",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32603,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "55c8140.6e8d96c",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 1 Sollwert Raumtemperatur",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32605,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "14f720c3.4ff5a7",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 1 Raumtemperatur extern",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32606,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "31cc2b53.bb86a4",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "4433cd6a.9b6814"
+            ]
+        ]
+    },
+    {
+        "id": "ba2dc4f0.a3ec2",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "55c8140.6e8d96c"
+            ]
+        ]
+    },
+    {
+        "id": "5e8c3ce8.9c3234",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "14f720c3.4ff5a7"
+            ]
+        ]
+    },
+    {
+        "id": "1b62e4b9.2d463b",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "52f40e25.0471b"
+            ]
+        ]
+    },
+    {
+        "id": "52f40e25.0471b",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 2 Betriebsart",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32653,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "da7f8dda.7c0d68",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 4 Betriebsart",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 3,\n    'unitid': 1,\n    'address': 32753,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "e309ccab.a4e7c",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "da7f8dda.7c0d68"
+            ]
+        ]
+    },
+    {
+        "id": "1cde5329.231a85",
+        "type": "inject",
+        "z": "c763d07c.69bc08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 440,
+        "wires": [
+            [
+                "30c494d9.65d74c"
+            ]
+        ]
+    },
+    {
+        "id": "30c494d9.65d74c",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "HK 2 Betriebsart",
+        "func": "msg.payload = {\n    'fc': 3,\n    'unitid': 1,\n    'address': 32703,\n    'quantity': 1}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "1e12c171.12efdf"
+            ]
+        ]
+    },
+    {
+        "id": "9fa7d0af.fb532",
+        "type": "function",
+        "z": "c763d07c.69bc08",
+        "name": "CD AB float",
+        "func": "// stackoverflow 40970739\n// Create a buffer\nvar buf = new ArrayBuffer(4);\n// Create a 16-bit int view of it\nvar ints = new Uint16Array(buf);\n\n// Read input in format \"CD AB\"\nvar data = msg.values;\ndata.forEach(function (b, i) {\n    ints[i] = b;\n});\n\n// Create a 32-bit float view of it\nvar floats = new Float32Array(buf);\n// Read the bits as a float; note that by doing this, we're implicitly\nmsg.result = floats[0];\n// Done\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3958f0d.2a01e1",
+        "type": "ui_gauge",
+        "z": "7217214e.19e608",
+        "name": "Kesseltemperatur",
+        "group": "fd4e11c5.b35d8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "90",
+        "x": 930,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bec346f.79d6338",
+        "type": "ui_text",
+        "z": "7217214e.19e608",
+        "group": "fd4e11c5.b35d8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Kessel Statuszeile",
+        "label": "Statuszeile",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 930,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5e24c583.475814",
+        "type": "ui_text",
+        "z": "7217214e.19e608",
+        "group": "fd4e11c5.b35d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Nachrichtennummer",
+        "label": "Nachrichtennummer",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1060,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9c583351.c3b25",
+        "type": "ui_text",
+        "z": "7217214e.19e608",
+        "group": "9e8e5d6d.870238",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Türkontakt",
+        "label": "Türkontakt",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1030,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3effb30c.56eed4",
+        "type": "ui_gauge",
+        "z": "7217214e.19e608",
+        "name": "Kesselreiningung",
+        "group": "9e8e5d6d.870238",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Kesselreiningung",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1050,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e58a9412.6391c",
+        "type": "ui_gauge",
+        "z": "7217214e.19e608",
+        "name": "Aschebox Füllstand",
+        "group": "9e8e5d6d.870238",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Aschebox Füllstand",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1050,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "52663d3c.aa7024",
+        "type": "ui_gauge",
+        "z": "7217214e.19e608",
+        "name": "Aussentemperatur",
+        "group": "f99c1bc5.1a327",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Aussentemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1050,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4304fcbb.a54544",
+        "type": "ui_chart",
+        "z": "7217214e.19e608",
+        "name": "Aussentemperatur",
+        "group": "f99c1bc5.1a327",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Aussentemperatur",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4412da8a.3758b4",
+        "type": "ui_gauge",
+        "z": "f3819da.37239e",
+        "name": "Temperatur",
+        "group": "e385b25b.dfa4e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 910,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "15768228.274bee",
+        "type": "ui_text",
+        "z": "f3819da.37239e",
+        "group": "e385b25b.dfa4e8",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Boiler Status",
+        "label": "Boiler Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2c3b56f9.dbf3e2",
+        "type": "ui_text",
+        "z": "f3819da.37239e",
+        "group": "e385b25b.dfa4e8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Boiler Freigabeart",
+        "label": "Boiler Freigabeart",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 930,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "73b01f98.fef2e8",
+        "type": "ui_gauge",
+        "z": "f3819da.37239e",
+        "name": "Temperatur oben",
+        "group": "a367ee1f.396868",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatur oben",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "395cb890.27e758",
+        "type": "ui_gauge",
+        "z": "f3819da.37239e",
+        "name": "Temperatur unten",
+        "group": "a367ee1f.396868",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatur unten",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5c761a4c.c7cc64",
+        "type": "ui_text",
+        "z": "f3819da.37239e",
+        "group": "a367ee1f.396868",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Ladepumpe",
+        "label": "Ladepumpe",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f3053602.c25798",
+        "type": "ui_text",
+        "z": "f3819da.37239e",
+        "group": "a367ee1f.396868",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Pufferstatus",
+        "label": "Pufferstatus",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "eec2d77a.9339e",
+        "type": "ui_text",
+        "z": "f3819da.37239e",
+        "group": "a367ee1f.396868",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Freigabeart",
+        "label": "Freigabeart",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8aead5f6.719148",
+        "type": "ui_gauge",
+        "z": "8790a00b.73e938",
+        "name": "Vorlauftemperatur",
+        "group": "2d9a60fc.a38cf",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vorlauftemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bc0666bb.8197b",
+        "type": "ui_gauge",
+        "z": "8790a00b.73e938",
+        "name": "Raumtemperatur",
+        "group": "2d9a60fc.a38cf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Raumtemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1170,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c35bfa83.5dc658",
+        "type": "ui_gauge",
+        "z": "8790a00b.73e938",
+        "name": "Pumpe",
+        "group": "2d9a60fc.a38cf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Pumpe",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c0c0",
+            "#e6e600",
+            "#008000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1140,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f47b500f.dd00f8",
+        "type": "ui_gauge",
+        "z": "8790a00b.73e938",
+        "name": "Mischer",
+        "group": "2d9a60fc.a38cf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Mischer",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "162c3c62.ada384",
+        "type": "ui_text",
+        "z": "8790a00b.73e938",
+        "group": "2d9a60fc.a38cf",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1130,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "5a876b0c.44973c",
+        "type": "inject",
+        "z": "ff12617a.b394c",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "1eec6446.1a63dc"
+            ]
+        ]
+    },
+    {
+        "id": "1eec6446.1a63dc",
+        "type": "function",
+        "z": "ff12617a.b394c",
+        "name": "HK 2 Vorlauf- und Raumtemperatur",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 1150,\n    'quantity': 2}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "8a775f3e.f7b888"
+            ]
+        ]
+    },
+    {
+        "id": "3ca2ed6c.275c4a",
+        "type": "inject",
+        "z": "ff12617a.b394c",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1 Status",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "734bb2f4.f3c3ec"
+            ]
+        ]
+    },
+    {
+        "id": "734bb2f4.f3c3ec",
+        "type": "function",
+        "z": "ff12617a.b394c",
+        "name": "HK 2 Pumpe, Mischer, Status",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 4,\n    'unitid': 1,\n    'address': 1155,\n    'quantity': 3}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "9924694.c0f9698"
+            ]
+        ]
+    },
+    {
+        "id": "8a775f3e.f7b888",
+        "type": "modbus-flex-getter",
+        "z": "ff12617a.b394c",
+        "name": "HK Temperatur",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "7f8efdcb.ffa334"
+            ],
+            [
+                "c95decc3.0ce5b"
+            ]
+        ]
+    },
+    {
+        "id": "7f8efdcb.ffa334",
+        "type": "function",
+        "z": "ff12617a.b394c",
+        "name": "HK Temperatur",
+        "func": "var msg1 = {\n    topic: \"Vorlauftemperatur\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Raumtemperatur\",\n    payload: msg.payload[1] / 10\n};\n//\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 940,
+        "y": 100,
+        "wires": [
+            [
+                "53426af4.c52234",
+                "ade0c21.1cf004"
+            ],
+            [
+                "f252e110.92b17",
+                "be0199fd.5252d8"
+            ]
+        ]
+    },
+    {
+        "id": "53426af4.c52234",
+        "type": "debug",
+        "z": "ff12617a.b394c",
+        "name": "Vorlauftemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1170,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c95decc3.0ce5b",
+        "type": "modbus-response",
+        "z": "ff12617a.b394c",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 950,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f252e110.92b17",
+        "type": "debug",
+        "z": "ff12617a.b394c",
+        "name": "Raumtemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1170,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9924694.c0f9698",
+        "type": "modbus-flex-getter",
+        "z": "ff12617a.b394c",
+        "name": "HK Status",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "6e114e3e.24f0b"
+            ],
+            [
+                "564135ed.a8dd6c"
+            ]
+        ]
+    },
+    {
+        "id": "a3bd5b98.16735",
+        "type": "debug",
+        "z": "ff12617a.b394c",
+        "name": "Pumpe",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1140,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "564135ed.a8dd6c",
+        "type": "modbus-response",
+        "z": "ff12617a.b394c",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 950,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6e114e3e.24f0b",
+        "type": "function",
+        "z": "ff12617a.b394c",
+        "name": "HK Status",
+        "func": "var msg1 = {\n    topic: \"Pumpe\",\n    payload: msg.payload[0]\n};\nvar msg2 = {\n    topic: \"Mischer\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Status\",\n    payload: msg.payload[2]\n};\n//\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 920,
+        "y": 360,
+        "wires": [
+            [
+                "a3bd5b98.16735",
+                "232c2010.5cacc"
+            ],
+            [
+                "12d4e732.9228c9",
+                "61bcb096.cb294"
+            ],
+            [
+                "c651ced1.203638",
+                "36dced4d.e36a4a"
+            ]
+        ]
+    },
+    {
+        "id": "12d4e732.9228c9",
+        "type": "debug",
+        "z": "ff12617a.b394c",
+        "name": "Mischer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1140,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c651ced1.203638",
+        "type": "debug",
+        "z": "ff12617a.b394c",
+        "name": "Status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1130,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ade0c21.1cf004",
+        "type": "ui_gauge",
+        "z": "ff12617a.b394c",
+        "name": "Vorlauftemperatur",
+        "group": "3a503143.2e89d6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vorlauftemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1170,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "be0199fd.5252d8",
+        "type": "ui_gauge",
+        "z": "ff12617a.b394c",
+        "name": "Raumtemperatur",
+        "group": "3a503143.2e89d6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Raumtemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1170,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "232c2010.5cacc",
+        "type": "ui_gauge",
+        "z": "ff12617a.b394c",
+        "name": "Pumpe",
+        "group": "3a503143.2e89d6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Pumpe",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c0c0",
+            "#e6e600",
+            "#008000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1140,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "61bcb096.cb294",
+        "type": "ui_gauge",
+        "z": "ff12617a.b394c",
+        "name": "Mischer",
+        "group": "3a503143.2e89d6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Mischer",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1140,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "36dced4d.e36a4a",
+        "type": "ui_text",
+        "z": "ff12617a.b394c",
+        "group": "3a503143.2e89d6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1130,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "552a6e1c.c01b98",
+        "type": "inject",
+        "z": "5fd98180.98acc",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "b70bdd10.54b488"
+            ]
+        ]
+    },
+    {
+        "id": "b70bdd10.54b488",
+        "type": "function",
+        "z": "5fd98180.98acc",
+        "name": "HK 4 Vorlauf- und Raumtemperatur",
+        "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 1250,\n    'quantity': 2}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "94a808b7.59a788"
+            ]
+        ]
+    },
+    {
+        "id": "731f64e2.b3e62c",
+        "type": "inject",
+        "z": "5fd98180.98acc",
+        "name": "Intervall 5 Minuten",
+        "topic": "HK 1 Status",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "55a21f51.102fd8"
+            ]
+        ]
+    },
+    {
+        "id": "55a21f51.102fd8",
+        "type": "function",
+        "z": "5fd98180.98acc",
+        "name": "HK 4 Pumpe, Mischer, Status",
+        "func": "msg.payload = {\n    value: msg.payload,\n    'fc': 4,\n    'unitid': 1,\n    'address': 1255,\n    'quantity': 3}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "6b8d4fec.ecf51"
+            ]
+        ]
+    },
+    {
+        "id": "94a808b7.59a788",
+        "type": "modbus-flex-getter",
+        "z": "5fd98180.98acc",
+        "name": "HK Temperatur",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 680,
+        "y": 80,
+        "wires": [
+            [
+                "a711e5a4.a3442"
+            ],
+            [
+                "b043be9.6a665c"
+            ]
+        ]
+    },
+    {
+        "id": "a711e5a4.a3442",
+        "type": "function",
+        "z": "5fd98180.98acc",
+        "name": "HK Temperatur",
+        "func": "var msg1 = {\n    topic: \"Vorlauftemperatur\",\n    payload: msg.payload[0] / 10\n};\nvar msg2 = {\n    topic: \"Raumtemperatur\",\n    payload: msg.payload[1] / 10\n};\n//\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 920,
+        "y": 80,
+        "wires": [
+            [
+                "85e68383.2a0af8",
+                "aaabb2f9.610848"
+            ],
+            [
+                "c90c8fce.f899a",
+                "14365acb.77675d"
+            ]
+        ]
+    },
+    {
+        "id": "85e68383.2a0af8",
+        "type": "debug",
+        "z": "5fd98180.98acc",
+        "name": "Vorlauftemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b043be9.6a665c",
+        "type": "modbus-response",
+        "z": "5fd98180.98acc",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c90c8fce.f899a",
+        "type": "debug",
+        "z": "5fd98180.98acc",
+        "name": "Raumtemperatur",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6b8d4fec.ecf51",
+        "type": "modbus-flex-getter",
+        "z": "5fd98180.98acc",
+        "name": "HK Status",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "9ebdbdea.286f08",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "44866570.677d0c"
+            ],
+            [
+                "a9654556.76b0d8"
+            ]
+        ]
+    },
+    {
+        "id": "fda36834.2f049",
+        "type": "debug",
+        "z": "5fd98180.98acc",
+        "name": "Pumpe",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a9654556.76b0d8",
+        "type": "modbus-response",
+        "z": "5fd98180.98acc",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "44866570.677d0c",
+        "type": "function",
+        "z": "5fd98180.98acc",
+        "name": "HK Status",
+        "func": "var msg1 = {\n    topic: \"Pumpe\",\n    payload: msg.payload[0]\n};\nvar msg2 = {\n    topic: \"Mischer\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Status\",\n    payload: msg.payload[2]\n};\n//\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 900,
+        "y": 340,
+        "wires": [
+            [
+                "fda36834.2f049",
+                "e6ee4497.589298"
+            ],
+            [
+                "73d98c4f.dfe154",
+                "3614ba65.a94c8e"
+            ],
+            [
+                "78c37945.267018",
+                "f7e14fa8.10748"
+            ]
+        ]
+    },
+    {
+        "id": "73d98c4f.dfe154",
+        "type": "debug",
+        "z": "5fd98180.98acc",
+        "name": "Mischer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1120,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "78c37945.267018",
+        "type": "debug",
+        "z": "5fd98180.98acc",
+        "name": "Status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1110,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "aaabb2f9.610848",
+        "type": "ui_gauge",
+        "z": "5fd98180.98acc",
+        "name": "Vorlauftemperatur",
+        "group": "1ea2d432.ad4d0c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vorlauftemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1150,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "14365acb.77675d",
+        "type": "ui_gauge",
+        "z": "5fd98180.98acc",
+        "name": "Raumtemperatur",
+        "group": "1ea2d432.ad4d0c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Raumtemperatur",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1150,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e6ee4497.589298",
+        "type": "ui_gauge",
+        "z": "5fd98180.98acc",
+        "name": "Pumpe",
+        "group": "1ea2d432.ad4d0c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Pumpe",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c0c0",
+            "#e6e600",
+            "#008000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1120,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "3614ba65.a94c8e",
+        "type": "ui_gauge",
+        "z": "5fd98180.98acc",
+        "name": "Mischer",
+        "group": "1ea2d432.ad4d0c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Mischer",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1120,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f7e14fa8.10748",
+        "type": "ui_text",
+        "z": "5fd98180.98acc",
+        "group": "1ea2d432.ad4d0c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    }
+]
