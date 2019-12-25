@@ -455,8 +455,8 @@
         "useIOFile": false,
         "ioFile": "",
         "useIOForPayload": false,
-        "x": 680,
-        "y": 360,
+        "x": 460,
+        "y": 500,
         "wires": [
             [
                 "c3504420.0eb0c"
@@ -477,8 +477,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1140,
-        "y": 320,
+        "x": 920,
+        "y": 460,
         "wires": []
     },
     {
@@ -487,8 +487,8 @@
         "z": "8790a00b.73e938",
         "name": "",
         "registerShowMax": 20,
-        "x": 950,
-        "y": 560,
+        "x": 730,
+        "y": 700,
         "wires": []
     },
     {
@@ -499,8 +499,8 @@
         "func": "var msg1 = {\n    topic: \"Pumpe\",\n    payload: msg.payload[0]\n};\nvar msg2 = {\n    topic: \"Mischer\",\n    payload: msg.payload[1]\n};\nvar msg3 = {\n    topic: \"Status\",\n    payload: msg.payload[2]\n};\n//\nreturn [msg1, msg2, msg3];",
         "outputs": 3,
         "noerr": 0,
-        "x": 920,
-        "y": 340,
+        "x": 700,
+        "y": 480,
         "wires": [
             [
                 "d9d1bc7c.47dc78",
@@ -511,8 +511,7 @@
                 "f47b500f.dd00f8"
             ],
             [
-                "c7fca43.6bfcbd8",
-                "162c3c62.ada384"
+                "be8f56ae.d3e94"
             ]
         ]
     },
@@ -527,8 +526,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1140,
-        "y": 400,
+        "x": 920,
+        "y": 540,
         "wires": []
     },
     {
@@ -542,8 +541,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1130,
-        "y": 480,
+        "x": 1190,
+        "y": 600,
         "wires": []
     },
     {
@@ -562,7 +561,8 @@
         "y": 140,
         "wires": [
             [
-                "37b9e248.4e8d76"
+                "37b9e248.4e8d76",
+                "75ec8c78.255df4"
             ]
         ]
     },
@@ -574,7 +574,7 @@
         "func": "msg.payload = {\n    'fc': 4,\n    'unitid': 1,\n    'address': 1900,\n    'quantity': 6};\nreturn msg",
         "outputs": 1,
         "noerr": 0,
-        "x": 340,
+        "x": 360,
         "y": 140,
         "wires": [
             [
@@ -591,7 +591,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 350,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "864f3c7f.d6799"
@@ -610,7 +610,7 @@
         "useIOFile": false,
         "ioFile": "",
         "useIOForPayload": false,
-        "x": 490,
+        "x": 510,
         "y": 140,
         "wires": [
             [
@@ -642,8 +642,8 @@
         "z": "f3819da.37239e",
         "name": "",
         "registerShowMax": 20,
-        "x": 350,
-        "y": 340,
+        "x": 710,
+        "y": 480,
         "wires": []
     },
     {
@@ -658,8 +658,8 @@
         "useIOFile": false,
         "ioFile": "",
         "useIOForPayload": false,
-        "x": 490,
-        "y": 560,
+        "x": 510,
+        "y": 620,
         "wires": [
             [
                 "ff923be2.c98958"
@@ -676,7 +676,7 @@
         "name": "",
         "registerShowMax": 20,
         "x": 710,
-        "y": 760,
+        "y": 820,
         "wires": []
     },
     {
@@ -691,7 +691,7 @@
         "complete": "payload",
         "targetType": "msg",
         "x": 910,
-        "y": 520,
+        "y": 580,
         "wires": []
     },
     {
@@ -714,16 +714,13 @@
                 "395cb890.27e758"
             ],
             [
-                "c7bc8d1a.9fb448",
-                "5c761a4c.c7cc64"
+                "493dbf7c.b70ee"
             ],
             [
-                "417206b8.a91ad",
-                "f3053602.c25798"
+                "13f2ba63.feb2ce"
             ],
             [
-                "4c7693ca.bc8ac4",
-                "eec2d77a.9339e"
+                "23eb63ec.6c483c"
             ]
         ]
     },
@@ -738,8 +735,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 910,
-        "y": 260,
+        "x": 1270,
+        "y": 240,
         "wires": []
     },
     {
@@ -753,8 +750,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 910,
-        "y": 340,
+        "x": 1270,
+        "y": 320,
         "wires": []
     },
     {
@@ -783,8 +780,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 910,
-        "y": 420,
+        "x": 1270,
+        "y": 400,
         "wires": []
     },
     {
@@ -796,19 +793,17 @@
         "outputs": 3,
         "noerr": 0,
         "x": 670,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "38b347a9.04623",
                 "4412da8a.3758b4"
             ],
             [
-                "1c9d6ebb.1806d9",
-                "15768228.274bee"
+                "6b422e96.6dce58"
             ],
             [
-                "9be4163e.6a33b8",
-                "2c3b56f9.dbf3e2"
+                "b91b5f9e.6aa5c8"
             ]
         ]
     },
@@ -823,8 +818,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 910,
-        "y": 600,
+        "x": 1270,
+        "y": 660,
         "wires": []
     },
     {
@@ -838,29 +833,9 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 930,
-        "y": 680,
+        "x": 1290,
+        "y": 740,
         "wires": []
-    },
-    {
-        "id": "da5f2173.408a7",
-        "type": "inject",
-        "z": "f3819da.37239e",
-        "name": "Intervall 6 Minuten",
-        "topic": "Boiler",
-        "payload": "",
-        "payloadType": "str",
-        "repeat": "360",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 160,
-        "y": 560,
-        "wires": [
-            [
-                "75ec8c78.255df4"
-            ]
-        ]
     },
     {
         "id": "e9d5b538.c2d908",
@@ -962,8 +937,7 @@
                 "3958f0d.2a01e1"
             ],
             [
-                "a9f0dab7.7e6a7",
-                "bec346f.79d6338"
+                "bf16a2c3.0ea598"
             ]
         ]
     },
@@ -978,8 +952,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 930,
-        "y": 160,
+        "x": 1310,
+        "y": 140,
         "wires": []
     },
     {
@@ -1037,8 +1011,7 @@
                 "5e24c583.475814"
             ],
             [
-                "89f86cc8.aeeaf",
-                "9c583351.c3b25"
+                "67f822d0.3590e4"
             ],
             [
                 "9f9dd68d.d39928",
@@ -1081,8 +1054,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1030,
-        "y": 460,
+        "x": 1390,
+        "y": 440,
         "wires": []
     },
     {
@@ -1097,7 +1070,7 @@
         "complete": "payload",
         "targetType": "msg",
         "x": 1050,
-        "y": 540,
+        "y": 500,
         "wires": []
     },
     {
@@ -1112,7 +1085,7 @@
         "complete": "payload",
         "targetType": "msg",
         "x": 1050,
-        "y": 620,
+        "y": 580,
         "wires": []
     },
     {
@@ -1127,7 +1100,7 @@
         "complete": "payload",
         "targetType": "msg",
         "x": 1050,
-        "y": 700,
+        "y": 660,
         "wires": []
     },
     {
@@ -1141,8 +1114,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1080,
-        "y": 820,
+        "x": 1480,
+        "y": 780,
         "wires": []
     },
     {
@@ -1698,8 +1671,8 @@
         "label": "Statuszeile",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 930,
-        "y": 200,
+        "x": 1310,
+        "y": 180,
         "wires": []
     },
     {
@@ -1730,8 +1703,8 @@
         "label": "Türkontakt",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1030,
-        "y": 500,
+        "x": 1390,
+        "y": 480,
         "wires": []
     },
     {
@@ -1757,7 +1730,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1050,
-        "y": 580,
+        "y": 540,
         "wires": []
     },
     {
@@ -1783,7 +1756,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1050,
-        "y": 660,
+        "y": 620,
         "wires": []
     },
     {
@@ -1809,7 +1782,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1050,
-        "y": 740,
+        "y": 700,
         "wires": []
     },
     {
@@ -1849,7 +1822,7 @@
         "useOldStyle": false,
         "outputs": 1,
         "x": 1050,
-        "y": 780,
+        "y": 740,
         "wires": [
             []
         ]
@@ -1877,7 +1850,7 @@
         "seg1": "",
         "seg2": "",
         "x": 910,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1892,8 +1865,8 @@
         "label": "Boiler Status",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 910,
-        "y": 640,
+        "x": 1270,
+        "y": 700,
         "wires": []
     },
     {
@@ -1908,8 +1881,8 @@
         "label": "Boiler Freigabeart",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 930,
-        "y": 720,
+        "x": 1290,
+        "y": 780,
         "wires": []
     },
     {
@@ -1976,8 +1949,8 @@
         "label": "Ladepumpe",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 910,
-        "y": 300,
+        "x": 1270,
+        "y": 280,
         "wires": []
     },
     {
@@ -1992,8 +1965,8 @@
         "label": "Pufferstatus",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 910,
-        "y": 380,
+        "x": 1270,
+        "y": 360,
         "wires": []
     },
     {
@@ -2008,8 +1981,8 @@
         "label": "Freigabeart",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 910,
-        "y": 460,
+        "x": 1270,
+        "y": 440,
         "wires": []
     },
     {
@@ -2086,8 +2059,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1140,
-        "y": 360,
+        "x": 920,
+        "y": 500,
         "wires": []
     },
     {
@@ -2112,8 +2085,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1140,
-        "y": 440,
+        "x": 920,
+        "y": 580,
         "wires": []
     },
     {
@@ -2128,8 +2101,8 @@
         "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1130,
-        "y": 520,
+        "x": 1190,
+        "y": 640,
         "wires": []
     },
     {
@@ -2356,8 +2329,7 @@
                 "61bcb096.cb294"
             ],
             [
-                "c651ced1.203638",
-                "36dced4d.e36a4a"
+                "c8203f16.b397a8"
             ]
         ]
     },
@@ -2387,8 +2359,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1130,
-        "y": 500,
+        "x": 1410,
+        "y": 480,
         "wires": []
     },
     {
@@ -2507,8 +2479,8 @@
         "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1130,
-        "y": 540,
+        "x": 1410,
+        "y": 520,
         "wires": []
     },
     {
@@ -2735,8 +2707,7 @@
                 "3614ba65.a94c8e"
             ],
             [
-                "78c37945.267018",
-                "f7e14fa8.10748"
+                "16ce2b11.57562d"
             ]
         ]
     },
@@ -2766,8 +2737,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1110,
-        "y": 480,
+        "x": 1390,
+        "y": 460,
         "wires": []
     },
     {
@@ -2886,8 +2857,194 @@
         "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1110,
-        "y": 520,
+        "x": 1390,
+        "y": 500,
         "wires": []
+    },
+    {
+        "id": "be8f56ae.d3e94",
+        "type": "function",
+        "z": "8790a00b.73e938",
+        "name": "Status to Description",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Heizkreis ist ausgeschaltet\"\n} else {\nif (msgId === 1) { msgString = \"Absenkbetrieb\"\n} else {\nif (msgId === 2) { msgString = \"Heizbetrieb\"\n} else {\nif (msgId === 3) { msgString = \"Ferienbetrieb\"\n} else {\nif (msgId === 4) { msgString = \"Estrichprogramm\"\n} else {\nif (msgId === 5) { msgString = \"Frostschutzbetrieb\"\n} else {\nif (msgId === 6) { msgString = \"Kaminkehrer\"\n} else {\nif (msgId === 7) { msgString = \"Heizkreis nicht freigeschaltet\"\n} else {\nif (msgId === 8) { msgString = \"Wärmeableitung\"\n} else {\nif (msgId === 9) { msgString = \"Außenabschalttemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 10) { msgString = \"Raumsolltemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 11) { msgString = \"Trinkwasserspeichervorrang ist aktiv\"\n} else {\nif (msgId === 12) { msgString = \"Dauerheizbetrieb\"\n} else {\nif (msgId === 13) { msgString = \"Dauerabsenkbetrieb\"\n} else {\nif (msgId === 14) { msgString = \"Aussenfühlerunterbrechung\"\n} else {\nif (msgId === 15) { msgString = \"min. Energiequellentemperatur unterschritten\"\n} else {\nif (msgId === 16) { msgString = \"Vorlauffühler defekt\"\n} else {\nif (msgId === 17) { msgString = \"min. Energiequellentemperatur unterschritten,   Frost-schutzbetrieb\"\n} else {\nif (msgId === 18) { msgString = \"Testlauf Pumpe ist aktiv\"\n} else {\nif (msgId === 19) { msgString = \"Partybetrieb\"\n} else {\nif (msgId === 20) { msgString = \"Begrenzungsthermostat ist offen\"\n} else {\nif (msgId === 21) { msgString = \"Pumpen Nachlauf\"\n} else {\nif (msgId === 22) { msgString = \"Defrost\"\n} else {\nif (msgId === 23) { msgString = \"Kühlbetrieb\"\n} else {\nif (msgId === 24) { msgString = \"Kühlen hat Vorrang\"\n} else {\nif (msgId === 25) { msgString = \"Heizen hat Vorrang\"\n} else {\nif (msgId === 26) { msgString = \"Pool hat Vorrang\"\n} else {\nif (msgId === 27) { msgString = \"Außenabschalttemperatur Absenkbetrieb erreicht\"\n} else {\nif (msgId === 28) { msgString = \"Raumsolltemperatur Absenkbetrieb erreicht\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 960,
+        "y": 620,
+        "wires": [
+            [
+                "c7fca43.6bfcbd8",
+                "162c3c62.ada384"
+            ]
+        ]
+    },
+    {
+        "id": "c8203f16.b397a8",
+        "type": "function",
+        "z": "ff12617a.b394c",
+        "name": "Status to Description",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Heizkreis ist ausgeschaltet\"\n} else {\nif (msgId === 1) { msgString = \"Absenkbetrieb\"\n} else {\nif (msgId === 2) { msgString = \"Heizbetrieb\"\n} else {\nif (msgId === 3) { msgString = \"Ferienbetrieb\"\n} else {\nif (msgId === 4) { msgString = \"Estrichprogramm\"\n} else {\nif (msgId === 5) { msgString = \"Frostschutzbetrieb\"\n} else {\nif (msgId === 6) { msgString = \"Kaminkehrer\"\n} else {\nif (msgId === 7) { msgString = \"Heizkreis nicht freigeschaltet\"\n} else {\nif (msgId === 8) { msgString = \"Wärmeableitung\"\n} else {\nif (msgId === 9) { msgString = \"Außenabschalttemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 10) { msgString = \"Raumsolltemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 11) { msgString = \"Trinkwasserspeichervorrang ist aktiv\"\n} else {\nif (msgId === 12) { msgString = \"Dauerheizbetrieb\"\n} else {\nif (msgId === 13) { msgString = \"Dauerabsenkbetrieb\"\n} else {\nif (msgId === 14) { msgString = \"Aussenfühlerunterbrechung\"\n} else {\nif (msgId === 15) { msgString = \"min. Energiequellentemperatur unterschritten\"\n} else {\nif (msgId === 16) { msgString = \"Vorlauffühler defekt\"\n} else {\nif (msgId === 17) { msgString = \"min. Energiequellentemperatur unterschritten,   Frost-schutzbetrieb\"\n} else {\nif (msgId === 18) { msgString = \"Testlauf Pumpe ist aktiv\"\n} else {\nif (msgId === 19) { msgString = \"Partybetrieb\"\n} else {\nif (msgId === 20) { msgString = \"Begrenzungsthermostat ist offen\"\n} else {\nif (msgId === 21) { msgString = \"Pumpen Nachlauf\"\n} else {\nif (msgId === 22) { msgString = \"Defrost\"\n} else {\nif (msgId === 23) { msgString = \"Kühlbetrieb\"\n} else {\nif (msgId === 24) { msgString = \"Kühlen hat Vorrang\"\n} else {\nif (msgId === 25) { msgString = \"Heizen hat Vorrang\"\n} else {\nif (msgId === 26) { msgString = \"Pool hat Vorrang\"\n} else {\nif (msgId === 27) { msgString = \"Außenabschalttemperatur Absenkbetrieb erreicht\"\n} else {\nif (msgId === 28) { msgString = \"Raumsolltemperatur Absenkbetrieb erreicht\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 500,
+        "wires": [
+            [
+                "c651ced1.203638",
+                "36dced4d.e36a4a"
+            ]
+        ]
+    },
+    {
+        "id": "16ce2b11.57562d",
+        "type": "function",
+        "z": "5fd98180.98acc",
+        "name": "Status to Description",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Heizkreis ist ausgeschaltet\"\n} else {\nif (msgId === 1) { msgString = \"Absenkbetrieb\"\n} else {\nif (msgId === 2) { msgString = \"Heizbetrieb\"\n} else {\nif (msgId === 3) { msgString = \"Ferienbetrieb\"\n} else {\nif (msgId === 4) { msgString = \"Estrichprogramm\"\n} else {\nif (msgId === 5) { msgString = \"Frostschutzbetrieb\"\n} else {\nif (msgId === 6) { msgString = \"Kaminkehrer\"\n} else {\nif (msgId === 7) { msgString = \"Heizkreis nicht freigeschaltet\"\n} else {\nif (msgId === 8) { msgString = \"Wärmeableitung\"\n} else {\nif (msgId === 9) { msgString = \"Außenabschalttemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 10) { msgString = \"Raumsolltemperatur Heizbetrieb erreicht\"\n} else {\nif (msgId === 11) { msgString = \"Trinkwasserspeichervorrang ist aktiv\"\n} else {\nif (msgId === 12) { msgString = \"Dauerheizbetrieb\"\n} else {\nif (msgId === 13) { msgString = \"Dauerabsenkbetrieb\"\n} else {\nif (msgId === 14) { msgString = \"Aussenfühlerunterbrechung\"\n} else {\nif (msgId === 15) { msgString = \"min. Energiequellentemperatur unterschritten\"\n} else {\nif (msgId === 16) { msgString = \"Vorlauffühler defekt\"\n} else {\nif (msgId === 17) { msgString = \"min. Energiequellentemperatur unterschritten,   Frost-schutzbetrieb\"\n} else {\nif (msgId === 18) { msgString = \"Testlauf Pumpe ist aktiv\"\n} else {\nif (msgId === 19) { msgString = \"Partybetrieb\"\n} else {\nif (msgId === 20) { msgString = \"Begrenzungsthermostat ist offen\"\n} else {\nif (msgId === 21) { msgString = \"Pumpen Nachlauf\"\n} else {\nif (msgId === 22) { msgString = \"Defrost\"\n} else {\nif (msgId === 23) { msgString = \"Kühlbetrieb\"\n} else {\nif (msgId === 24) { msgString = \"Kühlen hat Vorrang\"\n} else {\nif (msgId === 25) { msgString = \"Heizen hat Vorrang\"\n} else {\nif (msgId === 26) { msgString = \"Pool hat Vorrang\"\n} else {\nif (msgId === 27) { msgString = \"Außenabschalttemperatur Absenkbetrieb erreicht\"\n} else {\nif (msgId === 28) { msgString = \"Raumsolltemperatur Absenkbetrieb erreicht\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            [
+                "78c37945.267018",
+                "f7e14fa8.10748"
+            ]
+        ]
+    },
+    {
+        "id": "13f2ba63.feb2ce",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Status to Description (Status)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Status nicht vorhanden\"\n} else {\nif (msgId === 1) { msgString = \"Bereitschaft\"\n} else {\nif (msgId === 2) { msgString = \"Puffer wird beladen\"\n} else {\nif (msgId === 3) { msgString = \"Frostschutzbetrieb\"\n} else {\nif (msgId === 4) { msgString = \"Kaminkehrer\"\n} else {\nif (msgId === 5) { msgString = \"Wärmeableitung\"\n} else {\nif (msgId === 6) { msgString = \"Testlauf Pumpe\"\n} else {\nif (msgId === 7) { msgString = \"Trinkwasserspeicher wird beladen\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "417206b8.a91ad",
+                "f3053602.c25798"
+            ]
+        ]
+    },
+    {
+        "id": "6b422e96.6dce58",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Status to Description (Boilerstatus)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Boilerstatus nicht vorhanden\"\n} else {\nif (msgId === 1) { msgString = \"Bereitschaft\"\n} else {\nif (msgId === 2) { msgString = \"Laden\"\n} else {\nif (msgId === 3) { msgString = \"Frostschutz\"\n} else {\nif (msgId === 4) { msgString = \"Kaminkehrer\"\n} else {\nif (msgId === 5) { msgString = \"Legionellenschutz\"\n} else {\nif (msgId === 6) { msgString = \"Anforderung\"\n} else {\nif (msgId === 7) { msgString = \"Energiequelle zu heiß\"\n} else {\nif (msgId === 8) { msgString = \"Blockadeschutz\"\n} else {\nif (msgId === 9) { msgString = \"einmalige Freigabe\"\n} else {\nif (msgId === 10) { msgString = \"Fühler Kurzschluss\"\n} else {\nif (msgId === 11) { msgString = \"Fühler Unterbrechung\"\n} else {\nif (msgId === 12) { msgString = \"Ferienbetrieb\"\n} else {\nif (msgId === 13) { msgString = \"Defrost\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 680,
+        "wires": [
+            [
+                "15768228.274bee",
+                "1c9d6ebb.1806d9"
+            ]
+        ]
+    },
+    {
+        "id": "b91b5f9e.6aa5c8",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Status to Description (Boiler Freigabe)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Immer Aus\"\n} else {\nif (msgId === 1) { msgString = \"Immer Ein\"\n} else {\nif (msgId === 2) { msgString = \"Mo–So\"\n} else {\nif (msgId === 3) { msgString = \"Blockweise (Mo-Fr, Sa-So)\"\n} else {\nif (msgId === 4) { msgString = \"Tagweise\"\n} else {\nmsgReturn = \"???\"\n}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 760,
+        "wires": [
+            [
+                "2c3b56f9.dbf3e2",
+                "9be4163e.6a33b8"
+            ]
+        ]
+    },
+    {
+        "id": "67f822d0.3590e4",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Status to Description (Türkontakt)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Tür geschlossen\"\n} else {\nif (msgId === 1) { msgString = \"Tür offen\"\n} else {\nmsgReturn = \"???\"\n}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1100,
+        "y": 460,
+        "wires": [
+            [
+                "89f86cc8.aeeaf",
+                "9c583351.c3b25"
+            ]
+        ]
+    },
+    {
+        "id": "bf16a2c3.0ea598",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Status to Description (Statuszeile)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Bereitschaft\"\n} else {\nif (msgId === 1) { msgString = \"Zündphase\"\n} else {\nif (msgId === 2) { msgString = \"Pelletsbetrieb\"\n} else {\nif (msgId === 3) { msgString = \"Kesselsolltemperatur erreicht, Nachlauf\"\n} else {\nif (msgId === 4) { msgString = \"Nachlauf\"\n} else {\nif (msgId === 5) { msgString = \"keine Anforderung, Nachlauf\"\n} else {\nif (msgId === 6) { msgString = \"Brenner ausgeschaltet\"\n} else {\nif (msgId === 7) { msgString = \"Pelletsvorratsbehälter ist leer, Nachlauf\"\n} else {\nif (msgId === 8) { msgString = \"Wärmetauscherreinigung ist aktiv\"\n} else {\nif (msgId === 9) { msgString = \"Wärmetauscherreinigung benötigt, Nachlauf\"\n} else {\nif (msgId === 10) { msgString = \"Stromausfall, Nachlauf\"\n} else {\nif (msgId === 11) { msgString = \"zweiter Zündversuch, Nachlauf\"\n} else {\nif (msgId === 12) { msgString = \"Füllraumtemperatur überschritten, Nachlauf\"\n} else {\nif (msgId === 13) { msgString = \"Einschub überlastet, Nachlauf\"\n} else {\nif (msgId === 14) { msgString = \"Fremdkessel aktiv, Nachlauf\"\n} else {\nif (msgId === 15) { msgString = \"Fremdkessel aktiv, Bereitschaft\"\n} else {\nif (msgId === 16) { msgString = \"Brenner ausgeschaltet, Nachlauf\"\n} else {\nif (msgId === 17) { msgString = \"Sicherheitskette ist offen\"\n} else {\nif (msgId === 18) { msgString = \"Sicherheitskette ist offen, Nachlauf\"\n} else {\nif (msgId === 19) { msgString = \"Restsauerstoffgehalt zu hoch, Nachlauf\"\n} else {\nif (msgId === 20) { msgString = \"Abgastemperatur zu gering, Nachlauf\"\n} else {\nif (msgId === 21) { msgString = \"Abgastemperatur zu hoch, Bereitschaft\"\n} else {\nif (msgId === 22) { msgString = \"Abgasfühler ist defekt, Bereitschaft\"\n} else {\nif (msgId === 23) { msgString = \"Einschubtemperatur zu hoch, Bereitschaft\"\n} else {\nif (msgId === 24) { msgString = \"Lambdasonde ist defekt, Nachlauf\"\n} else {\nif (msgId === 25) { msgString = \"Kesseltemperatur ist ausreichend, Bereitschaft\"\n} else {\nif (msgId === 26) { msgString = \"kein Stromfluss Einschubmotor, Nachlauf\"\n} else {\nif (msgId === 27) { msgString = \"Kesselfühler ist defekt, Bereitschaft\"\n} else {\nif (msgId === 28) { msgString = \"Kesselfühler ist defekt, Nachlauf\"\n} else {\nif (msgId === 29) { msgString = \"Lambdasonde wird beheizt\"\n} else {\nif (msgId === 30) { msgString = \"Wärmetauscherreinigung wartet auf eine Freigabe, Zeit\"\n} else {\nif (msgId === 31) { msgString = \"Wärmetauscherreinigung wartet auf eine Freigabe, AGT\"\n} else {\nif (msgId === 32) { msgString = \"Wärmetauscherreinigung wartet auf eine Freigabe, KT\"\n} else {\nif (msgId === 33) { msgString = \"Saugaustragung wartet auf nächste Freigabezeit\"\n} else {\nif (msgId === 34) { msgString = \"Pelletsvorratsbehälter wird befüllt\"\n} else {\nif (msgId === 35) { msgString = \"Einschubfühlerkurzschluss, Bereitschaft\"\n} else {\nif (msgId === 36) { msgString = \"Rückbrandschieber öffnet\"\n} else {\nif (msgId === 37) { msgString = \"Kessel wird befüllt\"\n} else {\nif (msgId === 38) { msgString = \"Lambdasonde wird kalibriert\"\n} else {\nif (msgId === 39) { msgString = \"Kaminkehrer Messfreigabe\"\n} else {\nif (msgId === 40) { msgString = \"Alarm aktiv!\"\n} else {\nif (msgId === 41) { msgString = \"Kesseltür ist offen, Bereitschaft\"\n} else {\nif (msgId === 42) { msgString = \"Tür war zu lange offen, Nachlauf\"\n} else {\nif (msgId === 44) { msgString = \"keine Brennerzeitfreigabe, Nachlauf\"\n} else {\nif (msgId === 45) { msgString = \"Luftzahl Zündphase zu tief, Nachlauf\"\n} else {\nif (msgId === 46) { msgString = \"Ascheaustragung aktiv\"\n} else {\nif (msgId === 47) { msgString = \"Kesseltür/Aschebox ist offen, Bereitschaft\"\n} else {\nif (msgId === 48) { msgString = \"Kesseltür/Aschebox wurde geöffnet, Nachlauf\"\n} else {\nif (msgId === 49) { msgString = \"Kessel aktiv\"\n} else {\nif (msgId === 50) { msgString = \"Saugaustragung wartet auf Umschalteinheit\"\n} else {\nif (msgId === 51) { msgString = \"Brenner ausgeschaltet, Mindestkessellaufzeit aktiv\"\n} else {\nif (msgId === 52) { msgString = \"Kaminkehrermessung beendet, Nachlauf\"\n} else {\nif (msgId === 53) { msgString = \"warten bis die Raumluftklappe offen ist\"\n} else {\nif (msgId === 54) { msgString = \"Stromausfall, Bereitschaft\"\n} else {\nif (msgId === 55) { msgString = \"Stromausfall, Nachlauf\"\n} else {\nif (msgId === 56) { msgString = \"WT-Spülung Brennwertmodul aktiv\"\n} else {\nif (msgId === 57) { msgString = \"Differenzdruckschalter hat ausgelöst, Nachlauf\"\n} else {\nif (msgId === 58) { msgString = \"warten auf Freigabe von Differenzdruckschalter\"\n} else {\nif (msgId === 59) { msgString = \"WT-Spülung Brennwertmodul wartet auf eine Freigabe\"\n} else {\nmsgReturn = \"???\"\n}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 160,
+        "wires": [
+            [
+                "a9f0dab7.7e6a7",
+                "bec346f.79d6338"
+            ]
+        ]
+    },
+    {
+        "id": "655e24ae.4ac294",
+        "type": "function",
+        "z": "7217214e.19e608",
+        "name": "Status to Description (Enumeration therminator)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1140,
+        "y": 780,
+        "wires": [
+            [
+                "8af4ab3e.080f9"
+            ]
+        ]
+    },
+    {
+        "id": "493dbf7c.b70ee",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Status to Description (Ladepumpe)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Wird nicht beladen\"\n} else {\nif (msgId === 1) { msgString = \"Wird beladen\"\n} else {\nmsgReturn = \"???\"\n}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 280,
+        "wires": [
+            [
+                "c7bc8d1a.9fb448",
+                "5c761a4c.c7cc64"
+            ]
+        ]
+    },
+    {
+        "id": "23eb63ec.6c483c",
+        "type": "function",
+        "z": "f3819da.37239e",
+        "name": "Status to Description (Freigabeart)",
+        "func": "var msgId = msg.payload;\nvar msgString = \"\";\n\nif (msgId === 0) { msgString = \"Immer Aus\"\n} else {\nif (msgId === 1) { msgString = \"Immer Ein\"\n} else {\nif (msgId === 2) { msgString = \"Zeitschaltung\"\n} else {\nmsgReturn = \"???\"\n}}}\n\nmsg.payload = msgString;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 420,
+        "wires": [
+            [
+                "eec2d77a.9339e",
+                "4c7693ca.bc8ac4"
+            ]
+        ]
     }
 ]
